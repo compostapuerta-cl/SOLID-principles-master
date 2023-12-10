@@ -1,0 +1,7 @@
+1. Para ver las clases ir a la carpeta "src"
+2. Estan dividas en carpetas "db", "model", "interfaces"
+3. Las clases se encuentran en la carpeta "model"
+4. Las interfaces se encuentran en la carpeta "interfaces"
+5. La data de prueba se encuentra en "db"
+6. Link de la pagina web : https://carlosm0905.github.io/Lab03-SOLID-Principles/dist/index
+7. Link del repositorio : https://carlosm0905.github.io/Lab03-SOLID-Principles

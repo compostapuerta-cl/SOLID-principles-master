@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab03-SOLID</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="display-4 ml-3">Buy your PC</h1>
+        </div>
+        <hr>
+        <div class="row">
+            <p class="lead ml-3">
+                Add the components what needs a see the final price, instantly!
+            </p>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="h4 ml-3">Our Products</div>
+                </div>
+                <hr>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Central Unit
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div id="listProcessors" class="card-body">
+                                <!-- <div class="card" style="width: 100%">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <h5 class="card-title">Titulo Componente</h5>
+                                                <p class="card-text">Descripcion Componente</p>
+                                                <p class="card-text">Precio</p>
+                                                <button class="btn btn-outline-primary">Agregar</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img  class="img-fluid" src="https://via.placeholder.com/100"
+                                                    alt="placeholder">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Input Devices
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div id="listInputs" class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Output Devices
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div id="listOutputs" class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    Special Devices
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div id="listSpecials" class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-6">
+                <div class="row d-flex align-items-center">
+                    <p class="h4 ml-3">Your list</p>
+                    <p class="h5 ml-5 text-info">Final Price</p>
+                    <p id="buyPrice" class="h5 ml-5">$0.0</p>
+                </div>
+                <hr>
+                <div class="row d-flex justify-content-center">
+                    <div id="listBuyProducts" class="col-md-10">
+                        <!-- <div class="card" style="width: 100%">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h5 class="card-title">Titulo Componente</h5>
+                                        <p class="card-text">Descripcion Componente</p>
+                                        <p class="card-text">Precio</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="img-fluid" src="https://via.placeholder.com/100"
+                                            alt="placeholder">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-2">
+                    <div class="col-md-10">
+                        <button disabled id="btnBuy" class="btn btn-primary btn-block"  data-toggle="modal" data-target="#staticBackdrop">
+                            Buy my PC
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">You want to make the purchase?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                Thanks for trusting us
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No :(</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Yes :)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
